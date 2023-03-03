@@ -12,6 +12,8 @@
 		DF957CBA29B246F4009E4DE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF957CB929B246F4009E4DE4 /* Preview Assets.xcassets */; };
 		DF957CC229B2478E009E4DE4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF957CC129B2478E009E4DE4 /* HomeView.swift */; };
 		DF957CC429B24A31009E4DE4 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF957CC329B24A31009E4DE4 /* WelcomeView.swift */; };
+		DF957CC629B2598E009E4DE4 /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF957CC529B2598E009E4DE4 /* SignInButton.swift */; };
+		DF957CC829B260CD009E4DE4 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF957CC729B260CD009E4DE4 /* SignUpButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		DF957CB929B246F4009E4DE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF957CC129B2478E009E4DE4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DF957CC329B24A31009E4DE4 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		DF957CC529B2598E009E4DE4 /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
+		DF957CC729B260CD009E4DE4 /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +57,12 @@
 		DF957CB129B246F2009E4DE4 /* Money */ = {
 			isa = PBXGroup;
 			children = (
+				DF957CC729B260CD009E4DE4 /* SignUpButton.swift */,
 				DF957CC029B24766009E4DE4 /* Views */,
 				DF957CB229B246F2009E4DE4 /* MoneyApp.swift */,
 				DF957CB629B246F4009E4DE4 /* Assets.xcassets */,
 				DF957CB829B246F4009E4DE4 /* Preview Content */,
+				DF957CC529B2598E009E4DE4 /* SignInButton.swift */,
 			);
 			path = Money;
 			sourceTree = "<group>";
@@ -149,8 +155,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF957CC229B2478E009E4DE4 /* HomeView.swift in Sources */,
+				DF957CC629B2598E009E4DE4 /* SignInButton.swift in Sources */,
 				DF957CC429B24A31009E4DE4 /* WelcomeView.swift in Sources */,
 				DF957CB329B246F2009E4DE4 /* MoneyApp.swift in Sources */,
+				DF957CC829B260CD009E4DE4 /* SignUpButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

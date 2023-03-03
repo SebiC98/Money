@@ -10,12 +10,52 @@ import SwiftUI
 struct WelcomeView: View {
     var body: some View {
         VStack {
-            Button("Sign in"){
+            ZStack (alignment: .topLeading){
+                
+                HStack(alignment: .bottom){
+                    Image("shapes")
+                        .ignoresSafeArea()
+                        Spacer()
+                }
+                
+                HStack {
+                    VStack() {
+                        Image("Logo-White 1")
+                            .padding()
+                            
+                        Text("Welcome \nBack")
+                            .padding()
+                            .padding(.horizontal, 20)
+                            .foregroundColor(.white)
+                            .font(.custom("Manrope", size: 32))
+                            
+                    }
+                }
                 
             }
-            Button("Sign up"){
+            Spacer()
+            ZStack {
+                Button(action: {
+                   print("text")
+                }, label: {
+                    })
+                .buttonStyle(SignInButtonStyle())
+            
+            .padding()
                 
+               
             }
+            
+            
+            Button(action: {
+                print("text")
+            }, label: {
+               
+            })
+            .buttonStyle(.signUp)
+            
+            
+           
         }
     }
 }
