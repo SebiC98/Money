@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  LaunchScreenView.swift
 //  Money
 //
 //  Created by Sebastian Cioată on 03.03.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct LaunchScreenView: View {
     var body: some View {
         Image("logo")
             .resizable()
@@ -15,8 +15,8 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct LaunchScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        LaunchScreenView()
     }
 }
