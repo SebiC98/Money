@@ -8,69 +8,82 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    
+    
+    @State var isSignInPressed = false
+    
     var body: some View {
         
-        // 3 Level of depth
-        ZStack(alignment: .topLeading) {
+        
+        
+        if isSignInPressed{
+            SignInView()
+        }else{
             
-            //Level 1 ( deepest )
-            VStack{
-                HStack(alignment: .bottom){
-                    Image("shapes")
-                        .ignoresSafeArea()
+            
+            // 3 Level of depth
+            ZStack(alignment: .topLeading) {
+                
+                //Level 1 ( deepest )
+                VStack{
+                    HStack(alignment: .bottom){
+                        Image("shapes")
+                            .ignoresSafeArea()
+                    }
+                    // push the image on the top side of the screen
+                    Spacer()
                 }
-                // push the image on the top side of the screen
-                Spacer()
-            }
-            
-            //3 Level of depth : Level 2
-            VStack{
-                HStack{
-                    VStack(alignment: .leading){
-                        Image("Logo-White 1")
+                
+                //3 Level of depth : Level 2
+                VStack{
+                    HStack{
+                        VStack(alignment: .leading){
+                            Image("Logo-White 1")
                             // .padding()
-                        
-                        Text("Welcome \nBack")
+                            
+                            Text("Welcome \nBack")
                             //.padding()
-                           // .padding(.horizontal, 20)
-                            .foregroundColor(.white)
-                            .font(.custom("Manrope", size: 32))
+                            // .padding(.horizontal, 20)
+                                .foregroundColor(.white)
+                                .font(.custom("Manrope", size: 32))
+                            Spacer()
+                        }
+                    }
+                    .padding([.top, .leading], 40)
+                    Spacer()
+                }
+                
+                //3 Level of depth : Level 3 ( closest to surface )
+                VStack{
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        VStack{
+                            Button(action: {
+                                self.isSignInPressed = true
+                            }, label: {
+                            })
+                            .buttonStyle(SignInButtonStyle())
+                            
+                            .padding(10)
+                            
+                            
+                            Button(action: {
+                                print("text")
+                            }, label: {
+                                
+                            })
+                            .buttonStyle(SignUpButtonStyle())
+                            
+                        }
+                        .padding(.bottom, 50)
                         Spacer()
                     }
-                }
-                .padding([.top, .leading], 40)
-                Spacer()
-            }
-            
-            //3 Level of depth : Level 3 ( closest to surface )
-            VStack{
-                Spacer()
-                HStack {
-                    Spacer()
-                    VStack{
-                        Button(action: {
-                            print("text")
-                        }, label: {
-                        })
-                        .buttonStyle(SignInButtonStyle())
-                        
-                        .padding(10)
-                        
-                        
-                        Button(action: {
-                            print("text")
-                        }, label: {
-                            
-                        })
-                        .buttonStyle(SignUpButtonStyle())
-                      
-                    }
-                    .padding(.bottom, 50)
-                    Spacer()
                 }
             }
         }
     }
+    
 }
 
 struct WelcomeView_Previews: PreviewProvider {
