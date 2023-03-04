@@ -7,6 +7,26 @@
 
 import SwiftUI
 
+struct SecureTextField: View{
+    @State private var isSecureField:Bool = true
+    @Binding var text: String
+    
+    var body: some View{
+        HStack{
+            if isSecureField{
+                SecureField("Password", text: $text)
+            }else{
+                TextField(text, text: $text)
+            }
+        }.overlay(alignment: .trailing){
+            Image(systemName: isSecureField ? "eye.slash" : "eye")
+                .onTapGesture {
+                    isSecureField.toggle()
+                }
+        }
+    }
+}
+
 struct SignInView: View{
     
     @State private var username: String = ""
@@ -48,21 +68,31 @@ struct SignInView: View{
                         .font(.custom("Manrope", size: 20))
                         .foregroundColor(Color(.lightGray))
                         .padding(.horizontal, -165)
-                        TextField("Username", text: $username)
-                            .padding(.horizontal, 47)
-                            .font(.custom("Manrope", size: 20))
-                            .foregroundColor(Color(.lightGray))
-                        Divider()
-                            .frame(width: 320.23)
-                            .background(Color(red: 39/255, green: 67/255, blue: 253/255))
-                        SecureField("Password", text: $password)
-                            .padding(.horizontal, 47)
-                            .font(.custom("Manrope", size: 20))
-                            .foregroundColor(Color(.lightGray))
-                        Divider()
-                            .frame(width: 320.23)
-                            .background(Color(red: 39/255, green: 67/255, blue: 253/255))
+                    TextField("Username", text: $username)
+                        .padding(.horizontal, 47)
+                        .font(.custom("Manrope", size: 20))
+                        .foregroundColor(Color(.black))
+                    Divider()
+                        .frame(width: 320.23)
+                        .background(Color(red: 39/255, green: 67/255, blue: 253/255))
+                    SecureTextField(text: $password )
+                        .padding(.horizontal, 47)
+                        .font(.custom("Manrope", size: 20))
+                        .foregroundColor(Color(.black))
+                    Divider()
+                        .frame(width: 320.23)
+                        .background(Color(red: 39/255, green: 67/255, blue: 253/255))
+                    HStack{
+                        Button(action: {
+                            print("text")
+                        }, label: {
+                            Text("Forgot password?")
+                        })
+                        
+                        .padding(.horizontal, 40)
+                        Spacer()
                     }
+                }
                 Spacer()
         }
         

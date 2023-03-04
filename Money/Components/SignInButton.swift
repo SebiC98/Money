@@ -17,27 +17,17 @@ struct SignInButtonStyle: ButtonStyle{
             HStack{
                 Spacer()
                 VStack{
-                    
                     ZStack(alignment: .topTrailing){
-                        
                         Image("Ellipse 4")
-                           
-                        //check mask
                         Image("Ellipse 5")
-                            .mask(RoundedRectangle(cornerRadius: 10)
-                                .fill(Color(red: 27/255, green: 57/255, blue: 255/255))
-                                .frame(width: 315, height: 72))
-                    
                     }
                     Spacer()
                 }
-                
             }
                 VStack{
                     HStack{
                 
                     Text("Sign in")
-                   
                         .font(.custom("Manrope", size: 20))
                         .foregroundColor(.white)
                 Spacer()
@@ -50,9 +40,7 @@ struct SignInButtonStyle: ButtonStyle{
                     configuration.label
                 }
         .frame(width: 315, height: 72)
-        
         .opacity(configuration.isPressed ? 0.7 : 1)
-        
     }
 }
 
